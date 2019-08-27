@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Rocket Launch Resources/RocketShip.png" type="Texture" id=1]
+[ext_resource path="res://RocketShip.gd" type="Script" id=2]
 
 [node name="World" type="Node"]
 
@@ -8,3 +9,4 @@
 position = Vector2( 640, 620 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
