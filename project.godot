@@ -16,7 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Rocket Launch"
+run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [importer_defaults]
 

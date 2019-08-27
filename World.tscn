@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Rocket Launch Resources/RocketShip.png" type="Texture" id=1]
+
+[node name="World" type="Node"]
+
+[node name="RocketShip" type="Sprite" parent="."]
+position = Vector2( 640, 620 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
