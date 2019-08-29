@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Rocket Launch Resources/RocketShip.png" type="Texture" id=2]
+[ext_resource path="res://Rocket Launch Resources/LaunchButton.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Launch"
@@ -21,6 +22,11 @@ tracks/0/keys = {
 [node name="World" type="Node"]
 script = ExtResource( 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
 [node name="RocketShip" type="Sprite" parent="."]
 position = Vector2( 640, 620 )
 scale = Vector2( 2, 2 )
@@ -28,3 +34,12 @@ texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Launch = SubResource( 1 )
+
+[node name="LaunchButton" type="TextureButton" parent="."]
+margin_left = 1166.0
+margin_top = 672.0
+margin_right = 1214.0
+margin_bottom = 688.0
+rect_scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 3 )
+[connection signal="pressed" from="LaunchButton" to="." method="_on_LaunchButton_pressed"]
